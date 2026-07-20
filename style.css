@@ -1,0 +1,366 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc);
+    min-height:100vh;
+    color:#222;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    text-align:center;
+    padding:45px 20px 25px;
+}
+
+header h1{
+    font-size:2.8rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#666;
+    font-size:1rem;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-section{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.search-box{
+    width:100%;
+    max-width:650px;
+    background:#fff;
+    border-radius:60px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.search-box i{
+    color:#777;
+    font-size:18px;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:18px;
+    font-size:17px;
+    font-family:inherit;
+}
+
+/* ===========================
+   CATEGORY BUTTONS
+=========================== */
+
+.categories{
+    width:90%;
+    max-width:1100px;
+    margin:15px auto;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.category{
+    border:none;
+    cursor:pointer;
+    padding:11px 18px;
+    border-radius:30px;
+    background:white;
+    font-size:15px;
+    font-weight:500;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.category:hover{
+    transform:translateY(-3px);
+    background:#4f46e5;
+    color:white;
+}
+
+.category.active{
+    background:#4f46e5;
+    color:#fff;
+}
+
+/* ===========================
+   RESULT
+=========================== */
+
+.result-info{
+    text-align:center;
+    margin:25px 0;
+    font-weight:600;
+    color:#555;
+}
+
+/* ===========================
+   EMOJI GRID
+=========================== */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.emoji-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+    gap:20px;
+    margin-bottom:60px;
+}
+
+.emoji-card{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.emoji-card:hover{
+    transform:translateY(-8px) scale(1.05);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+
+.emoji{
+    font-size:48px;
+    margin-bottom:12px;
+}
+
+.name{
+    font-size:14px;
+    color:#666;
+    text-transform:capitalize;
+    word-break:break-word;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty-state{
+    display:none;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.empty-state img{
+    width:180px;
+    margin-bottom:20px;
+}
+
+.empty-state h2{
+    margin-bottom:10px;
+}
+
+.empty-state p{
+    color:#666;
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.toast{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#16a34a;
+    color:white;
+    padding:14px 24px;
+    border-radius:50px;
+    font-weight:600;
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(20px);
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.toast.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:14px;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#4f46e5;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .emoji-grid{
+        grid-template-columns:repeat(auto-fill,minmax(100px,1fr));
+        gap:15px;
+    }
+
+    .emoji{
+        font-size:40px;
+    }
+
+    .category{
+        font-size:13px;
+        padding:10px 15px;
+    }
+
+    .search-box input{
+        font-size:15px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    header{
+        padding:30px 15px;
+    }
+
+    header h1{
+        font-size:1.7rem;
+    }
+
+    .emoji-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .toast{
+        right:15px;
+        left:15px;
+        text-align:center;
+    }
+
+}
+/* ===========================
+   THEME BUTTON
+=========================== */
+
+.theme-btn{
+    margin-top:20px;
+    padding:12px 22px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:#4f46e5;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:.3s;
+}
+
+.theme-btn:hover{
+    transform:translateY(-3px);
+    background:#3730a3;
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+body.dark{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark header p,
+body.dark .result-info,
+body.dark footer,
+body.dark .name{
+    color:#cfcfcf;
+}
+
+body.dark .search-box,
+body.dark .emoji-card,
+body.dark .category{
+    background:#1e1e1e;
+    color:#ffffff;
+}
+
+body.dark .search-box input{
+    color:#ffffff;
+}
+
+body.dark .search-box input::placeholder{
+    color:#b5b5b5;
+}
+
+body.dark .category:hover{
+    background:#6366f1;
+}
+
+body.dark .category.active{
+    background:#6366f1;
+}
+
+body.dark .toast{
+    background:#22c55e;
+}
+
+body.dark ::-webkit-scrollbar-track{
+    background:#222;
+}
