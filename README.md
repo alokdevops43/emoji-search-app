@@ -1,4 +1,4 @@
-# 😀 Emoji Search App
+ Emoji Search App
 
 A clean and responsive Emoji Search application built using **HTML, CSS, and JavaScript**.
 
